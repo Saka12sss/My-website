@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทเรียนที่ 1: การแนะนำตัวเอง</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .question-container {
+            margin-top: 20px;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .options button {
+            background-color: #008CBA;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            width: 200px;
+            transition: background-color 0.3s;
+        }
+
+        .options button:hover {
+            background-color: #0077A1;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>บทเรียนที่ 1: การแนะนำตัวเอง</h1>
+    </header>
+
+    <main>
+        <h2>การแนะนำตัวเองในภาษาจีน</h2>
+        <p>ในการแนะนำตัวเองเป็นภาษาจีน คุณสามารถพูดได้ตามนี้:</p>
+        <ul>
+            <li>สวัสดี: 你好 (Nǐ hǎo)</li>
+            <li>ชื่อของฉันคือ: 我叫 (Wǒ jiào) [ชื่อ]</li>
+            <li>ฉันอายุ [อายุ] ปี: 我 [อายุ] 岁 (Wǒ [อายุ] suì)</li>
+        </ul>
+
+        <p>ตัวอย่าง:</p>
+        <p>你好，我叫 [ชื่อ]。我 [อายุ] 岁。</p>
+
+        <p>ฝึกพูดตามตัวอย่างข้างต้นเพื่อแนะนำตัวเองในภาษาจีน</p>
+
+        <!-- เกมตอบคำถาม -->
+        <div class="question-container">
+            <p class="question">คำว่า "สวัสดี" ในภาษาจีนคืออะไร?</p>
+            <div class="options">
+                <button onclick="checkAnswer('A')">A. 你好 (Nǐ hǎo)</button>
+                <button onclick="checkAnswer('B')">B. 谢谢 (Xièxiè)</button>
+                <button onclick="checkAnswer('C')">C. 我叫 (Wǒ jiào)</button>
+                <button onclick="checkAnswer('D')">D. 请问 (Qǐngwèn)</button>
+            </div>
+            <div id="feedback1" class="feedback"></div>
+        </div>
+        <br>
+        <a href="index.html">กลับสู่หน้าหลัก</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 สอนภาษาจีน ม.4</p>
+    </footer>
+
+    <script>
+        function checkAnswer(selectedAnswer) {
+            var correctAnswer = 'A';
+            var feedbackElement = document.getElementById('feedback1');
+            
+            if (selectedAnswer === correctAnswer) {
+                feedbackElement.innerHTML = 'ถูกต้อง! เยี่ยมมาก!';
+                feedbackElement.style.color = 'green';
+            } else {
+                feedbackElement.innerHTML = 'คำตอบผิด ลองใหม่อีกครั้ง!';
+                feedbackElement.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทเรียนที่ 2: การถามทาง</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .question-container {
+            margin-top: 20px;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .options button {
+            background-color: #008CBA;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            width: 200px;
+            transition: background-color 0.3s;
+        }
+
+        .options button:hover {
+            background-color: #0077A1;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>บทเรียนที่ 2: การถามทาง</h1>
+    </header>
+
+    <main>
+        <h2>การถามทางในภาษาจีน</h2>
+        <p>ในการถามทางเป็นภาษาจีน คุณสามารถพูดได้ตามนี้:</p>
+        <ul>
+            <li>ขอโทษ, ไป [สถานที่] อย่างไร?: 对不起，去 [สถานที่] 怎么走？(Duìbùqǐ, qù [สถานที่] zěnme zǒu?)</li>
+            <li>ไปตรงนี้, แล้วเลี้ยวขวา: 直走，然后右转 (Zhí zǒu, ránhòu yòu zhuǎn)</li>
+            <li>ไปทางซ้าย: 向左走 (Xiàng zuǒ zǒu)</li>
+        </ul>
+
+        <p>ฝึกพูดประโยคเหล่านี้เพื่อถามทางในสถานการณ์ต่าง ๆ</p>
+
+        <!-- เกมตอบคำถาม -->
+        <div class="question-container">
+            <p class="question">คำว่า "ไปทางซ้าย" ในภาษาจีนคืออะไร?</p>
+            <div class="options">
+                <button onclick="checkAnswer('A')">A. 向左走 (Xiàng zuǒ zǒu)</button>
+                <button onclick="checkAnswer('B')">B. 直走 (Zhí zǒu)</button>
+                <button onclick="checkAnswer('C')">C. 请问 (Qǐngwèn)</button>
+                <button onclick="checkAnswer('D')">D. 然后右转 (Ránhòu yòu zhuǎn)</button>
+            </div>
+            <div id="feedback2" class="feedback"></div>
+        </div>
+        <br>
+        <a href="index.html">กลับสู่หน้าหลัก</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 สอนภาษาจีน ม.4 </p>
+    </footer>
+
+    <script>
+        function checkAnswer(selectedAnswer) {
+            var correctAnswer = 'A';
+            var feedbackElement = document.getElementById('feedback2');
+            
+            if (selectedAnswer === correctAnswer) {
+                feedbackElement.innerHTML = 'ถูกต้อง! เยี่ยมมาก!';
+                feedbackElement.style.color = 'green';
+            } else {
+                feedbackElement.innerHTML = 'คำตอบผิด ลองใหม่อีกครั้ง!';
+                feedbackElement.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
